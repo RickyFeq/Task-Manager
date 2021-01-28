@@ -1,0 +1,89 @@
+#container {
+    margin-top: 15px;
+}
+
+img {
+    margin-left: 30%;
+    height: 190px;
+    width: 35%;
+    object-fit: cover;
+}
+
+#useAcc {
+    text-align: center;
+}
+
+#fullname2, #password2 {
+    width: 30%;
+    margin-left: 35%;
+}
+
+#fullname, #username, #password {
+    width: 30%;
+    margin-left: 35%;
+}
+
+#signinbtn {
+    margin-left:45%;
+}
+
+#create {
+    margin-left: 41%;
+}
+
+#b1, #b2, #b3 {
+    margin-left: 35%;
+}
+
+#rowtop {
+    background-color: #b4b4b4;
+}
+
+#tableD {
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+#footTask {
+    color: #1c4b9f;
+    background-color: #67b9d4;
+    padding: 0;
+    text-align: center;
+}
+
+#btns {
+    margin: 2px;
+    position: relative;
+    display: block;
+    left: 30%;
+    right: 50%
+}
+
+#heady {
+    background-color: #ededed;
+    line-height: 3.0rem;
+}
+
+#lbl {
+    position: relative;
+    top: 25px;
+}
+
+#lbl2 {
+    position: relative;
+    left: 80%;
+    bottom: 25px;
+}
+
+#lbl3 {
+    position: relative;
+    font-size: 15px;
+    font-weight: 400;
+    bottom: 10px;
+    right: 30%;
+}
+
+#lbl4 {
+    font-weight: 400;
+}
+
