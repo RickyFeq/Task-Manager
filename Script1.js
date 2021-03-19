@@ -10,17 +10,43 @@ function createAcc() {
   userObj.username = document.getElementById('mUsername').value;
   userObj.userpassword = document.getElementById('mPassword').value;
 
+  console.log(userObj);
+
   var users = JSON.parse(localStorage.getItem('All Users'));
   if (users == null) {
     users = [];
   }
-  users.push(userObj);
-  localStorage.setItem('All Users', JSON.stringify(users));
+
+  // var userName = document.getElementById('fullname2').value;
+  // var pass = document.getElementById('password2').value;
+  var userFound = false;
+
+  for (let i = 0; i < users.length; i++) {
+    if (
+      users[i].username == userObj.username &&
+      users[i].userpassword == userObj.userpassword
+    ) {
+      userFound = true;
+      alert('User already exists.');
+      break;
+    }
+  }
+
+  console.log(users);
+
+  if (userFound == true) {
+    console.log('send use');
+    return;
+  }
 
   if (document.getElementById('mPassword').value.length < 8) {
     alert('Password cannot be less than 8 characters.');
     document.getElementById('mPassword').focus();
   } else {
+    users.push(userObj);
+    localStorage.setItem('All Users', JSON.stringify(users));
+    alert('Account created!');
+    clearFields();
     $('#exampleModal').modal('hide');
   }
 }
@@ -50,6 +76,12 @@ function signIn() {
   if (userFound == false) {
     alert('Username or password is incorrect.');
   }
+}
+
+function clearFields() {
+  document.getElementById('mName').value = '';
+  document.getElementById('mUsername').value = '';
+  document.getElementById('mPassword').value = '';
 }
 
 function addTask() {
